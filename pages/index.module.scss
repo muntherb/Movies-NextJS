@@ -1,0 +1,140 @@
+$small: 700px;
+
+.header{
+    padding-left: 5rem;
+    color: yellow;
+}
+
+.topDiv{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.search{
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('https://www.w3schools.com/howto/searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  &:focus{
+    width: 100%;
+  }
+}
+.movies{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .content{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .content:first-child{
+        padding-top: 30px;
+    }
+    .content:not(:first-child){
+        padding-top: 25px;
+        margin-top: 25px;
+        border-top: 1px solid yellow;
+        border-width: 50%;
+    }
+    .content:last-child{
+        padding-bottom: 50px;
+    }
+}
+@media screen and (max-width: $small) {
+    .navbar{
+        z-index: 3;
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+        position: fixed;
+        background-color: #FEEE00;
+        .logo{
+            display: none;
+        }
+        .icon{
+            height: 4rem;
+            width:3em;
+            font-size: 20px;
+            color: black
+        }.iconS{
+            height: 4rem;
+            width:3em;
+            font-size: 20px;
+            color: purple;
+            border: purple;
+            border-bottom: groove;
+        }
+        .nav{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .link{
+            display: flex;
+            align-items: center;
+            height: 5rem;
+            color: cyan;
+            text-decoration: none;
+        }
+    }
+  }
+  @media screen and (min-width: $small) {
+    .navbar{
+        z-index: 3;
+        margin-left: -5rem;
+        margin-top: -3rem;
+        width: 5rem;
+        height: 110vh;
+        position: fixed;
+        background-color: #FEEE00;
+        .icon{
+            height: 4rem;
+            width:3em;
+            font-size: 20px;
+            color: black
+        }.iconS{
+            height: 4rem;
+            width:3em;
+            font-size: 20px;
+            color: purple;
+            border: purple;
+            border-bottom: groove;
+        }
+        .nav{
+            height: 100%;
+            list-style: none;
+            padding: 0;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .link{
+            display: flex;
+            align-items: center;
+            height: 5rem;
+            color: cyan;
+            text-decoration: none;
+        }
+    }
+  }
+
+  

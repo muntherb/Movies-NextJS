@@ -1,0 +1,108 @@
+$c: yellow;
+$h: black;
+
+%bg {
+  color:black;
+  background: $c;
+  border-color: $c;
+}
+%b {
+  color: $c;
+  border-color: $c;
+  background: transparent;
+}
+%t {
+  color: $c;
+  border-color: transparent;
+  background: transparent;
+}
+%p {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $c;
+  width: 150%;
+  padding-top: 150%;
+  transition: 0.25s ease;
+}
+%pc {
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+%c {
+  position: relative;
+  overflow: hidden;
+}
+%s {
+  box-shadow: 
+    0 5px 5px -5px rgba($c, 0.15),
+    0 10px 10px -5px rgba($c, 0.15),
+    0 15px 15px -5px rgba($c, 0.15),
+    0 20px 20px -5px rgba($c, 0.15);
+}
+
+.btnWrap{
+    margin-top: auto;
+    text-align: center;
+}
+
+.Btn{
+    padding: 10px 20px;
+  border-radius: 6px;
+  border-width: 2px;
+  border-style: solid;
+  font-size: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  cursor: pointer;
+  transition: 0.25s ease;
+  & > span {
+    position: relative;
+    z-index: 1;
+  }
+  &.heart{
+    @extend %bg;
+    @extend %c;
+    &::after {
+      @extend %pc;
+      content: "❤️";
+      position: absolute;
+      left: -20%;
+      transition: 0.25s ease;
+    }
+    span {
+      transition: 0.25s ease;
+    }
+    &:hover {
+      span {
+        margin-left: 20px;
+      }
+      &:after {
+        left: 20px;
+      }
+    }
+  }
+  &.trash {
+    @extend %bg;
+    @extend %c;
+    &::after {
+      @extend %pc;
+      content: "🗑️";
+      position: absolute;
+      left: -20%;
+      transition: 0.25s ease;
+    }
+    span {
+      transition: 0.25s ease;
+    }
+    &:hover {
+      span {
+        margin-left: 20px;
+      }
+      &:after {
+        left: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+
+@media screen and (max-width: 700px) {
+    body{
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    body {
+          margin-left: 5rem;
+      }
+}
+body {
+    font-family: 'Roboto','Helvetica','Arial','sans-serif';
+      color: white;
+      background-color: black;
+  }
+  body::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: yellow;
+  }
