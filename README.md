@@ -1,4 +1,4 @@
-## ***Mmovies search and favourite single-page wep app using NextJS and Express with MongoDB***
+## ***Movies search and favourite single-page wep app using NextJS and Express with MongoDB***
 
 This project was made using NextJS and Express.
 
